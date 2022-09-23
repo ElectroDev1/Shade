@@ -21,7 +21,7 @@ This is the same as using shader_set() and then using shader_reset(), nothing mu
 # Uniforms
 
 Every Shade element stores a list of uniform ids, and you have full control on which are loaded with `loadUni(* uniform name *)`, 
-to apply a value to an uniform, you then use `applyUni(* uniform name *, * value *, [variable type])`<br><br>
+to apply a value to an uniform, you then use `applyUni(* uniform name *, * value *, [variable type])`<br>
 ```
 myShade.loadUni("u_time");
 
