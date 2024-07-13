@@ -20,18 +20,18 @@ This is the same as using shader_set() and then using shader_reset(), nothing mu
 
 # Uniforms
 
-Every Shade element stores a list of uniform ids, and you have full control on which are loaded with `loadUni(* uniform name *)`, 
-to apply a value to an uniform, you then use `applyUni(* uniform name *, * value *, [variable type])`<br>
+Every Shade element stores a list of uniform ids, and you have full control on which are loaded with `loadUniform(* uniform name *)`, 
+to apply a value to an uniform, you then use `applyUniform(* uniform name *, * value *, [variable type])`<br>
 ```
-myShade.loadUni("u_time");
+myShade.loadUniform("u_time");
 
-myShade.applyUni("u_time", current_time, UniTypes.f);
+myShade.applyUniform("u_time", current_time, UNIFORMTYPES.f);
 ```
 
-`loadUni()` is not necessary since `applyUni()` will load the uniform id if it wasn't loeaded before, but you can use it if you want.
+`loadUniform()` is not necessary since `applyUniform()` will load the uniform id if it wasn't loeaded before, but you can use it if you want.
 <br>
 
- ### UniTypes list
+ ### UNIFORMTYPES list
 
   * f             -   float
   * f_array       -   float array
@@ -44,9 +44,10 @@ myShade.applyUni("u_time", current_time, UniTypes.f);
  
  # Samplers
  
-  Samplers / textures work the same way as uniforms, but instead use `loadSampler(* sampler name *)` and `applyTexture(* sampler name *, * texture *)`<br>
+  Samplers / textures work the same way as uniforms, but instead use `loadSampler(* sampler name *)` and `applyTexture(* sampler name *, * texture *, * image index *)`<br>
   ```
   myShade.loadSampler("s_grass");
   
-  myShade.applyTexture("s_grass", sprite_get_texture(spr_grass,0) );
+  // use the spr_grass sprite on index 1
+  myShade.applyTexture("s_grass", spr_grass, 1);
   ```

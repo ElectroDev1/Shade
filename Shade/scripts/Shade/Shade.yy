@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "Shade",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Shade",
-    "path": "Shade.yyp",
+  "$GMScript":"v1",
+  "%Name":"Shade",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Shade",
+  "parent":{
+    "name":"Shade",
+    "path":"Shade.yyp",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
